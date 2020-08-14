@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 checkRelease();
                 randomizeSound();
                 incrementCount();
-                Toast.makeText(getBaseContext(), "АYAYA AGAIN",
-                        Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -73,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             soundPlay(superAyayaSound);
             final Animation animationRotateCenter = AnimationUtils.loadAnimation(
                     this, R.anim.anim_center);
+//            animationRotateCenter.setDuration(2000);
             ayaya.startAnimation(animationRotateCenter);
             final Animation animationRotateCenter1 = AnimationUtils.loadAnimation(
                     this, R.anim.anim_center);
@@ -80,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
             final Animation animationRotateCenter2 = AnimationUtils.loadAnimation(
                     this, R.anim.anim_center);
             countTextView.startAnimation(animationRotateCenter2);
+            animationRotateCenter.setDuration(2000);
+            animationRotateCenter1.setDuration(2000);
+            animationRotateCenter2.setDuration(2000);
         } else {
             soundPlay(ayayaSound);
         }
